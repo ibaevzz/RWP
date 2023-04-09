@@ -1,37 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:textSize="40sp"
-        android:gravity="center"
-        style="@style/BoldTextStyle"
-        android:text="@string/rwp"/>
-
-    <androidx.appcompat.widget.AppCompatButton
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:padding="10dp"
-        android:text="@string/registration"
-        android:background="@drawable/registration_button"
-        style="@style/BoldTextStyle"
-        android:id="@+id/registration"/>
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:text="@string/sign_in"
-        style="@style/ButtonTextStyle"
-        android:textSize="20sp"
-        android:id="@+id/sign_in"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:textSize="40sp"
+            android:gravity="center"
+            style="@style/BoldTextStyle"
+            android:text="@string/rwp"/>
 
-</LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
+            android:text="@string/registration"
+            android:background="@drawable/registration_button"
+            style="@style/BoldTextStyle"
+            android:textColor="@color/white"
+            android:id="@+id/registration"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="@string/sign_in"
+            style="@style/ButtonTextStyle"
+            android:textSize="19sp"
+            android:id="@+id/sign_in"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="@string/guest"
+            style="@style/ButtonTextStyle"
+            android:textSize="19sp"
+            android:id="@+id/guest"/>
+
+    </LinearLayout>
+</ScrollView>

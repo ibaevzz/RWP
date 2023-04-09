@@ -10,4 +10,6 @@
     <string name="how_sign_in">Как вы хотите войти?</string>
     <string name="didnotreg">Еще не зарегестрированы?</string>
     <string name="reg">Зарегестрироваться</string>
+    <string name="guest">Войти как гость</string>
+    <string name="with_number">По номеру телефона</string>
 </resources>

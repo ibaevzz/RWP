@@ -6,7 +6,7 @@
     app:startDestination="@id/mainRegistrationFragment">
     <fragment
         android:id="@+id/mainRegistrationFragment"
-        android:name="com.ibaevzz.rwp.MainRegistrationFragment"
+        android:name="com.ibaevzz.rwp.auth.MainRegistrationFragment"
         android:label="MainRegistrationFragment" >
         <action
             android:id="@+id/action_mainRegistrationFragment_to_registrationFragment"
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.ibaevzz.rwp.RegistrationFragment"
+        android:name="com.ibaevzz.rwp.auth.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.ibaevzz.rwp.SignInFragment"
+        android:name="com.ibaevzz.rwp.auth.SignInFragment"
         android:label="SignInFragment" >
         <action
             android:id="@+id/action_signInFragment_to_registrationFragment"

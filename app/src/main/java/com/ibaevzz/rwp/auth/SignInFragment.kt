@@ -1,4 +1,4 @@
-package com.ibaevzz.rwp
+package com.ibaevzz.rwp.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater
