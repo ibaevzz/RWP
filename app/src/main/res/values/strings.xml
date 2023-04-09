@@ -7,4 +7,7 @@
     <string name="reg_with_google">С помощью Google</string>
     <string name="reg_with_email">С помощью email</string>
     <string name="didreg">Уже зарегистрированы?</string>
+    <string name="how_sign_in">Как вы хотите войти?</string>
+    <string name="didnotreg">Еще не зарегестрированы?</string>
+    <string name="reg">Зарегестрироваться</string>
 </resources>

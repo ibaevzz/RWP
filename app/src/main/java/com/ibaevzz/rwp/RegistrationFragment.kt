@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.ibaevzz.rwp.databinding.FragmentRegistrationBinding
 
-class RegistrationFragment : Fragment() {
+class RegistrationFragment: Fragment() {
 
     private lateinit var binding: FragmentRegistrationBinding
 
@@ -19,6 +19,9 @@ class RegistrationFragment : Fragment() {
         binding = FragmentRegistrationBinding.inflate(inflater)
         binding.back.setOnClickListener{
             findNavController().navigateUp()
+        }
+        binding.signIn.setOnClickListener{
+            findNavController().navigate(RegistrationFragmentDirections.actionRegistrationFragmentToSignInFragment())
         }
         return binding.root
     }

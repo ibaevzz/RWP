@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ibaevzz.rwp.databinding.ActivityAuthBinding
 
-class AuthActivity : AppCompatActivity() {
+class AuthActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityAuthBinding
 
