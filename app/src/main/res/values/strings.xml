@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">RWP</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="registration">Регистрация</string>
     <string name="sign_in">Войти</string>
     <string name="rwp">Read, watch, play</string>
+    <string name="how_reg">Как вы хотите зарегистрироваться?</string>
+    <string name="reg_with_google">С помощью Google</string>
+    <string name="reg_with_email">С помощью email</string>
+    <string name="didreg">Уже зарегистрированы?</string>
 </resources>

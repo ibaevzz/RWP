@@ -9,9 +9,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
         android:textSize="40sp"
+        android:gravity="center"
+        style="@style/BoldTextStyle"
         android:text="@string/rwp"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -22,6 +22,7 @@
         android:padding="10dp"
         android:text="@string/registration"
         android:background="@drawable/registration_button"
+        style="@style/BoldTextStyle"
         android:id="@+id/registration"/>
 
     <TextView
@@ -29,8 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:text="@string/sign_in"
-        android:textColor="#0091EA"
-        android:textStyle="bold"
+        style="@style/ButtonTextStyle"
         android:textSize="20sp"
         android:id="@+id/sign_in"/>
 

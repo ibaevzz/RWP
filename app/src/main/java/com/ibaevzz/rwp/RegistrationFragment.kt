@@ -6,19 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.ibaevzz.rwp.databinding.FragmentMainRegistrationBinding
+import com.ibaevzz.rwp.databinding.FragmentRegistrationBinding
 
-class MainRegistrationFragment : Fragment() {
+class RegistrationFragment : Fragment() {
 
-    private lateinit var binding: FragmentMainRegistrationBinding
+    private lateinit var binding: FragmentRegistrationBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentMainRegistrationBinding.inflate(inflater)
-        binding.registration.setOnClickListener{
-            findNavController().navigate(R.id.registrationFragment)
+        binding = FragmentRegistrationBinding.inflate(inflater)
+        binding.back.setOnClickListener{
+            findNavController().navigateUp()
         }
         return binding.root
     }

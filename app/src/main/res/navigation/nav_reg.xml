@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_reg"
+    app:startDestination="@id/mainRegistrationFragment">
+    <fragment
+        android:id="@+id/mainRegistrationFragment"
+        android:name="com.ibaevzz.rwp.MainRegistrationFragment"
+        android:label="MainRegistrationFragment" >
+        <action
+            android:id="@+id/action_mainRegistrationFragment_to_registrationFragment2"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.ibaevzz.rwp.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+</navigation>
