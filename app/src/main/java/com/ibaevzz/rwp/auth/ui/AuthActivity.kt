@@ -1,4 +1,4 @@
-package com.ibaevzz.rwp.auth
+package com.ibaevzz.rwp.auth.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

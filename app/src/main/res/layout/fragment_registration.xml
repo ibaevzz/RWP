@@ -1,149 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/back"
-        android:layout_margin="10dp"
-        android:id="@+id/back"/>
-
-    <ScrollView
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/back">
-    <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/parent">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back"
+            android:layout_margin="10dp"
+            android:id="@+id/back"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/back">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/how_reg"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    style="@style/BoldTextStyle"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reg_with_google">
+                    <ImageView
+                        android:id="@+id/google"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/google"
+                        android:layout_margin="20dp"
+                        android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reg_with_google"
+                        android:layout_toEndOf="@id/google"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/forward"
+                        android:layout_margin="20dp"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reg_with_email">
+                    <ImageView
+                        android:id="@+id/email"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/email"
+                        android:layout_margin="20dp"
+                        android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reg_with_email"
+                        android:layout_toEndOf="@id/email"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/forward"
+                        android:layout_margin="20dp"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reg_with_number">
+                    <ImageView
+                        android:id="@+id/number"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/phone"
+                        android:layout_margin="20dp"
+                        android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/with_number"
+                        android:layout_toEndOf="@id/number"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/forward"
+                        android:layout_margin="20dp"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/didreg"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="25sp"
+                    style="@style/BoldTextStyle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sign_in"
+                    android:text="@string/sign_in"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="18sp"
+                    style="@style/ButtonTextStyle" />
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:indicatorColor="@color/purple_700"
+        android:indeterminate="true"
+        android:id="@+id/progress"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/how_reg"
-            android:textSize="30sp"
-            android:gravity="center"
-            android:layout_margin="20dp"
-            style="@style/BoldTextStyle"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/reg_with_google">
-            <ImageView
-                android:id="@+id/google"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/google"
-                android:layout_margin="20dp"
-                android:layout_alignParentStart="true"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/reg_with_google"
-                android:layout_toEndOf="@id/google"
-                android:layout_centerVertical="true"
-                android:textSize="18sp"/>
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/forward"
-                android:layout_margin="20dp"
-                android:layout_alignParentEnd="true"/>
-        </RelativeLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="@android:color/darker_gray"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/reg_with_email">
-            <ImageView
-                android:id="@+id/email"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/email"
-                android:layout_margin="20dp"
-                android:layout_alignParentStart="true"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/reg_with_email"
-                android:layout_toEndOf="@id/email"
-                android:layout_centerVertical="true"
-                android:textSize="18sp"/>
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/forward"
-                android:layout_margin="20dp"
-                android:layout_alignParentEnd="true"/>
-        </RelativeLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="@android:color/darker_gray"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/reg_with_number">
-            <ImageView
-                android:id="@+id/number"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/phone"
-                android:layout_margin="20dp"
-                android:layout_alignParentStart="true"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/with_number"
-                android:layout_toEndOf="@id/number"
-                android:layout_centerVertical="true"
-                android:textSize="18sp"/>
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/forward"
-                android:layout_margin="20dp"
-                android:layout_alignParentEnd="true"/>
-        </RelativeLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/didreg"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:textSize="25sp"
-            style="@style/BoldTextStyle" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sign_in"
-            android:text="@string/sign_in"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textSize="18sp"
-            style="@style/ButtonTextStyle" />
-    </LinearLayout>
-    </ScrollView>
-
-</RelativeLayout>
+</FrameLayout>

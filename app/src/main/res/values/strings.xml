@@ -12,4 +12,10 @@
     <string name="reg">Зарегестрироваться</string>
     <string name="guest">Войти как гость</string>
     <string name="with_number">По номеру телефона</string>
+    <string name="password">Пароль</string>
+    <string name="email">Email</string>
+    <string name="password_again">Введите пароль еще раз</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="code">Введите код</string>
+    <string name="get_code">Получить код</string>
 </resources>

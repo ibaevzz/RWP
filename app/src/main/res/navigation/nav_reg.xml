@@ -6,7 +6,7 @@
     app:startDestination="@id/mainRegistrationFragment">
     <fragment
         android:id="@+id/mainRegistrationFragment"
-        android:name="com.ibaevzz.rwp.auth.MainRegistrationFragment"
+        android:name="com.ibaevzz.rwp.auth.ui.MainRegistrationFragment"
         android:label="MainRegistrationFragment" >
         <action
             android:id="@+id/action_mainRegistrationFragment_to_registrationFragment"
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.ibaevzz.rwp.auth.RegistrationFragment"
+        android:name="com.ibaevzz.rwp.auth.ui.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" >
         <action
@@ -25,15 +25,39 @@
             app:destination="@id/signInFragment"
             app:popUpTo="@id/registrationFragment"
             app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_registrationFragment_to_emailRegFragment"
+            app:destination="@id/emailRegFragment" />
+        <action
+            android:id="@+id/action_registrationFragment_to_phoneRegFragment"
+            app:destination="@id/phoneRegFragment" />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.ibaevzz.rwp.auth.SignInFragment"
+        android:name="com.ibaevzz.rwp.auth.ui.SignInFragment"
         android:label="SignInFragment" >
         <action
             android:id="@+id/action_signInFragment_to_registrationFragment"
             app:destination="@id/registrationFragment"
             app:popUpTo="@id/signInFragment"
             app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_signInFragment_to_phoneRegFragment"
+            app:destination="@id/phoneRegFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_emailSignInFragment"
+            app:destination="@id/emailSignInFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/emailRegFragment"
+        android:name="com.ibaevzz.rwp.auth.ui.EmailRegFragment"
+        android:label="EmailRegFragment" />
+    <fragment
+        android:id="@+id/phoneRegFragment"
+        android:name="com.ibaevzz.rwp.auth.ui.PhoneRegFragment"
+        android:label="PhoneRegFragment" />
+    <fragment
+        android:id="@+id/emailSignInFragment"
+        android:name="com.ibaevzz.rwp.auth.ui.EmailSignInFragment"
+        android:label="EmailSignInFragment" />
 </navigation>

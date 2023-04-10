@@ -5,7 +5,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.ibaevzz.rwp.WEB_CLIENT
-import com.ibaevzz.rwp.auth.RegistrationFragment
+import com.ibaevzz.rwp.auth.ui.RegistrationFragment
+import com.ibaevzz.rwp.auth.ui.SignInFragment
 import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
@@ -15,6 +16,7 @@ import dagger.Provides
 interface AppComponent{
 
     fun inject(fragment: RegistrationFragment)
+    fun inject(fragment: SignInFragment)
 
     @Component.Builder
     interface Builder{

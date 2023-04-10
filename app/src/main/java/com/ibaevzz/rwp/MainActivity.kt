@@ -3,14 +3,10 @@ package com.ibaevzz.rwp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.viewModels
-import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.ibaevzz.rwp.auth.AuthActivity
+import com.ibaevzz.rwp.auth.ui.AuthActivity
 import com.ibaevzz.rwp.databinding.ActivityMainBinding
-import javax.inject.Inject
 
 class MainActivity: AppCompatActivity() {
 
@@ -25,6 +21,11 @@ class MainActivity: AppCompatActivity() {
             finish()
         }
         binding = ActivityMainBinding.inflate(layoutInflater)
+        binding.button.setOnClickListener{
+            Firebase.auth.signOut()
+            startActivity(Intent(this, AuthActivity::class.java))
+            finish()
+        }
         setContentView(binding.root)
     }
 
