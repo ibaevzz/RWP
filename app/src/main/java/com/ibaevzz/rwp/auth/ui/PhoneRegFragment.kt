@@ -16,7 +16,7 @@ import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.ibaevzz.rwp.MainActivity
+import com.ibaevzz.rwp.ui.MainActivity
 import com.ibaevzz.rwp.R
 import com.ibaevzz.rwp.auth.models.PhoneRegViewModel
 import com.ibaevzz.rwp.databinding.FragmentPhoneRegBinding

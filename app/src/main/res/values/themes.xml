@@ -30,4 +30,7 @@
         <item name="cornerSizeBottomRight">20dp</item>
         <item name="cornerSizeBottomLeft">20dp</item>
     </style>
+
+    <style name="Widget.Material3.BottomNavigationView.MyBottom" parent="Widget.Material3.BottomNavigationView">
+    </style>
 </resources>

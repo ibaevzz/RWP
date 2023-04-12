@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.ibaevzz.rwp.App
-import com.ibaevzz.rwp.MainActivity
+import com.ibaevzz.rwp.ui.MainActivity
 import com.ibaevzz.rwp.auth.models.RegistrationViewModel
 import com.ibaevzz.rwp.databinding.FragmentRegistrationBinding
 import javax.inject.Inject

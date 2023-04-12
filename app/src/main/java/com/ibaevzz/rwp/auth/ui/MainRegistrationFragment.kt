@@ -6,10 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.ibaevzz.rwp.MainActivity
+import com.ibaevzz.rwp.ui.MainActivity
 import com.ibaevzz.rwp.R
 import com.ibaevzz.rwp.auth.models.MainRegViewModel
 import com.ibaevzz.rwp.databinding.FragmentMainRegistrationBinding
