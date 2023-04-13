@@ -12,7 +12,9 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import com.ibaevzz.rwp.data.Profile
 
 class RegistrationViewModel: ViewModel() {
 
@@ -28,7 +30,21 @@ class RegistrationViewModel: ViewModel() {
             )
             val credential = Firebase.auth.signInWithCredential(authCredential)
             credential.addOnCompleteListener {
-                resultReg.value = it.isSuccessful
+                if(it.isSuccessful) {
+                    val user = Firebase.auth.currentUser
+                    val profile = Profile(
+                        uid = user?.uid ?: "",
+                        email = googleSignInAccount.email ?: "",
+                        photo = googleSignInAccount.photoUrl.toString(),
+                        name = googleSignInAccount.givenName ?: "Безымяный",
+                        surname = googleSignInAccount.familyName ?: ""
+                    )
+                    Firebase.database.reference.child("profiles").child(profile.uid)
+                        .setValue(profile)
+                    resultReg.value = true
+                }else{
+                    resultReg.value = false
+                }
             }
         }else{
             resultReg.value = false

@@ -18,4 +18,8 @@
     <string name="phone_number">Номер телефона</string>
     <string name="code">Введите код</string>
     <string name="get_code">Получить код</string>
+    <string name="books">Books</string>
+    <string name="films">Films</string>
+    <string name="games">Games</string>
+    <string name="profile">Profile</string>
 </resources>

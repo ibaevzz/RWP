@@ -17,6 +17,7 @@ class BooksFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentBooksBinding.inflate(inflater)
+
         return binding.root
     }
 }

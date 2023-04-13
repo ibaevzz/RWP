@@ -2,22 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:icon="@drawable/forward"
+        android:icon="@drawable/books"
         android:id="@+id/books"
-        android:title="profile" />
+        android:title="@string/books"
+        app:showAsAction="ifRoom"/>
 
     <item
-        android:icon="@drawable/forward"
+        android:icon="@drawable/films"
         android:id="@+id/films"
-        android:title="profile" />
+        android:title="@string/films"
+        app:showAsAction="ifRoom"/>
 
     <item
-        android:icon="@drawable/forward"
+        android:icon="@drawable/games"
         android:id="@+id/games"
-        android:title="profile" />
+        android:title="@string/games"
+        app:showAsAction="ifRoom"/>
 
     <item
-        android:icon="@drawable/forward"
+        android:icon="@drawable/profile"
         android:id="@+id/profile"
-        android:title="profile" />
+        android:title="@string/profile"
+        app:showAsAction="ifRoom"/>
 </menu>
