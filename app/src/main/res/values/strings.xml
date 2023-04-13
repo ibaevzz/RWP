@@ -22,4 +22,5 @@
     <string name="films">Films</string>
     <string name="games">Games</string>
     <string name="profile">Profile</string>
+    <string name="edit_profile">Редактировать профиль</string>
 </resources>

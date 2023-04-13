@@ -17,7 +17,7 @@ class MainRegViewModel: ViewModel() {
             .addOnCompleteListener{
                 if(it.isSuccessful){
                     val user = Firebase.auth.currentUser
-                    val profile = Profile(uid = user?.uid ?:"")
+                    val profile = Profile(uid = user?.uid ?:"", name = "Гость")
                     Firebase.database.reference.child("profiles").child(profile.uid).setValue(profile)
                     result.value = true
                 }else{
