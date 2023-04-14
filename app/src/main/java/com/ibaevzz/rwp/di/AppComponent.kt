@@ -1,6 +1,7 @@
 package com.ibaevzz.rwp.di
 
 import android.content.Context
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -59,7 +60,7 @@ object AuthModule{
 object MainModule{
 
     @Provides
-    fun getProfile(): MutableLiveData<Profile>{
+    fun getProfile(): LiveData<Profile> {
         val reference = Firebase.database.reference
         val user = Firebase.auth.currentUser
         val liveData = MutableLiveData<Profile>()
