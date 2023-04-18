@@ -39,8 +39,13 @@ class RegistrationViewModel: ViewModel() {
                         name = googleSignInAccount.givenName ?: "Безымяный",
                         surname = googleSignInAccount.familyName ?: ""
                     )
-                    Firebase.database.reference.child("profiles").child(profile.uid)
-                        .setValue(profile)
+                    Firebase.database.reference.child("profiles").child(profile.uid).get().addOnCompleteListener {task->
+                        if (task.isSuccessful) {
+                            if(task.result.getValue(Profile::class.java)==null){
+                                Firebase.database.reference.child("profiles").child(profile.uid).setValue(profile)
+                            }
+                        }
+                    }
                     resultReg.value = true
                 }else{
                     resultReg.value = false

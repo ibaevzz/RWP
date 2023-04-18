@@ -39,10 +39,12 @@ class ProfileFragment: Fragment() {
         var i = 0.0f
         while (true) {
             launch (Dispatchers.Main) {
-                binding.bio.alpha = i%1
-                binding.email.alpha = i%1
-                binding.name.alpha = i%1
-                binding.phone.alpha = i%1
+                if(isViewCreated) {
+                    binding.bio.alpha = i % 1
+                    binding.email.alpha = i % 1
+                    binding.name.alpha = i % 1
+                    binding.phone.alpha = i % 1
+                }
             }
             if(i>=0.95f) {
                 bool = false
@@ -60,6 +62,7 @@ class ProfileFragment: Fragment() {
 
     private lateinit var binding: FragmentProfileBinding
     private lateinit var builder: AlertDialog.Builder
+    private var isViewCreated = false
 
     override fun onAttach(context: Context) {
         (activity?.application as App).appComponent.inject(this)
@@ -83,6 +86,7 @@ class ProfileFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentProfileBinding.inflate(inflater)
+        isViewCreated = true
         binding.logout.setOnClickListener{
             signOut()
         }

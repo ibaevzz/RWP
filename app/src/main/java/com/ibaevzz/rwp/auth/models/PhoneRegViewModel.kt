@@ -23,8 +23,13 @@ class PhoneRegViewModel: ViewModel() {
                         name = "Безымяный",
                         phone = user?.phoneNumber ?: ""
                     )
-                    Firebase.database.reference.child("profiles").child(profile.uid)
-                        .setValue(profile)
+                    Firebase.database.reference.child("profiles").child(profile.uid).get().addOnCompleteListener {task->
+                        if (task.isSuccessful) {
+                            if(task.result.getValue(Profile::class.java)==null){
+                                Firebase.database.reference.child("profiles").child(profile.uid).setValue(profile)
+                            }
+                        }
+                    }
                     complete.value = true
                 }else{
                     complete.value = false
